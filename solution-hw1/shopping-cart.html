@@ -1,94 +1,80 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
   <head>
-    <title>Shopping Cart</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,200&display=swap"
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet">
-      
-      <link rel="stylesheet" href="css/style.css">
-  
-  </head>
 
+    <title>Shopping Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,200&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
 
   <body>
 
     <div class="logo">
-        <a class="logo" href="./index.html">
-          <img class="logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">
-        </a>
+      <a class="logo" href="./index.html">
+      <img class="logo" src="assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">
+      </a>
+    </div>
+
+    <hr>
+
+    <nav class="center">
+      <a href="./product-detail-page.html">PRODUCTS</a>
+    </nav>
+
+    <p></p>
+
+    <nav class="center">
+      <a href="./shopping-cart.html">CART</a>
+    </nav>
+
+    <h1 class="heading">Shopping Cart</h1>
+
+    <section class="cart-card">
+      <img class="cart-thumbnail" src="assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
+      <div class="remove">
+        Remove
       </div>
-      
-  
-        <hr>
-  
-  
-        <nav class="center">
-          <a href="./product-detail-page.html">PRODUCTS</a>
-        </nav>
-  
-        <p></p>
-  
-        <nav class="center">
-          <a href="./shopping-cart.html">CART</a>
-        </nav>
-
-
-      
-      <h1 class="heading">Shopping Cart</h1>
 
       <section class="cart-card">
-                <img class="cart-thumbnail" src="assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
-            
-                <div class="remove">
-                    Remove
-                </div>
+        <div>Original Cinnamon Roll</div>
+        <div>Glazing: Keep original</div>
+        <div>Pack size: 1</div>
+      </section>
 
-            <section class="cart-card">
-
-                <div>Original Cinnamon Roll</div>
-                <div>Glazing: Keep original</div>
-                <div>Pack size: 1</div>
-            
-            </section>
-
-                <div>$2.49</div>
-            
-        </section>
-
-        <section class="cart-card">
-            <img class="cart-thumbnail" src="assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double-chocolate Cinnamon Roll">
-        
-            <div class="remove">
-                Remove
-            </div>
-
-        <section class="cart-card">
-
-            <div>Double Chocolate Cinnamon Roll</div>
-            <div>Glazing: Sugar milk</div>
-            <div>Pack size: 6</div>
-        
-        </section>
-
-            <div>$27.45</div>
-        
+      <div>$2.49</div>
     </section>
 
-<hr class="hr-cart">
+    <section class="cart-card">
+      <img class="cart-thumbnail" src="assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double-chocolate Cinnamon Roll">
+      <div class="remove">
+        Remove
+      </div>
 
-                <div class="center">
-                Total: $29.94
-                </div>
+      <section class="cart-card">
+        <div>Double Chocolate Cinnamon Roll</div>
+        <div>Glazing: Sugar milk</div>
+        <div>Pack size: 6</div>
+      </section>
 
-                <div class="center">
-                    <button class="btn-cart">Checkout</button>
-                </div>
+      <div>$27.45</div>
+    </section>
 
+    <hr class="hr-cart">
+    <div class="center">
+      Total: $29.94
+    </div>
+
+    <div class="center">
+      <button class="btn-cart">Checkout</button>
+    </div>
+    
   </body>
 </html>
