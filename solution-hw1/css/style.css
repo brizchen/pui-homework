@@ -72,6 +72,11 @@ a:hover {
 
 }
 
+.center-highlight {
+  background-color: yellow;
+  
+}
+
 .product-card {
   box-sizing: border-box;
   width: 420px;
