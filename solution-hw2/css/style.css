@@ -1,0 +1,156 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: #404040;
+}
+
+h1 {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: underline;
+  margin-bottom: 1px;
+}
+
+.logo {
+  width: 400px;
+}
+
+.logo:hover {
+  background-color: transparent;
+}
+
+hr {
+  border-top: 5px solid black;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.hr-cart {
+  width: 500px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.remove {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-highlight {
+  background-color: yellow;
+  text-align: center;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 420px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  padding: 8px;
+}
+
+.product-card:hover {
+  background-color: yellow;
+}
+
+.gallery-thumbnail {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+.detail-thumbnail {
+  width: 600px;
+  height: 600px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 2px solid black;
+}
+
+.cart-thumbnail {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.detail-card {
+  box-sizing: border-box;
+  width: 250px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.btn-detail {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+
+  width: 175px;
+
+  margin-left: 25px;
+  padding: 8px;
+
+  background-color: yellow;
+  border: 3px solid black;
+
+  cursor: pointer;
+}
+
+.cart-card {
+  box-sizing: border-box;
+  width: 250px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  padding: 8px;
+  text-align: center;
+}
+
+
+.btn-cart {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  width: 150px;
+
+  margin-top: 15px;
+  padding: 8px;
+
+  background-color: yellow;
+  border: 3px solid black;
+
+  cursor: pointer;
+}

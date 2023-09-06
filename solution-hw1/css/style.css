@@ -42,7 +42,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.productlink:hover {
   background-color: yellow;
   font-weight: bold;
 }
@@ -61,6 +61,7 @@ a:hover {
 .center-highlight {
   background-color: yellow;
   text-align: center;
+  font-weight: bold;
 }
 
 .product-card {
@@ -113,6 +114,7 @@ a:hover {
 .btn-detail {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
+  font-weight: bold;
 
   width: 175px;
 
