@@ -60,7 +60,7 @@ function displayOptions() {
 selectGlazing.addEventListener('change', onSelectValueChange);
 selectPackSize.addEventListener('change', onSelectValueChange);
 
-window.onload(displayOptions())
+displayOptions()
 
 function onSelectValueChange() {
     let priceGlazing = document.querySelector('#pricefinal');
