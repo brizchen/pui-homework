@@ -1,6 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: #404040;
 }
 
@@ -26,7 +26,7 @@ h2 {
 
 .nav-right {
   display: flex;
-  width: calc(100% - 400px);
+  width: 100%;
   justify-content: space-around;
   flex-direction: column;
 }
@@ -40,7 +40,7 @@ h2 {
 
 .logo {
   width: 400px;
-  flex-shrink: 0;
+  margin-right: 20px;
 }
 
 .logo:hover {
@@ -49,8 +49,7 @@ h2 {
 
 hr {
   height: 6px;
-  width:100%;
-  margin-left: 5%;
+  width: 100%;
   background-color: black;
 }
 
@@ -65,11 +64,10 @@ a {
 }
 
 .remove {
-  font-size: 15px;
   font-weight: bold;
   color: black;
   text-decoration: underline;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .highlight {
@@ -131,12 +129,13 @@ a {
   display: flex;
   margin-left: 35%;
   margin-right: auto;
+  width: calc(100% - 400px);
 }
 
 .cart-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
 }
 
 .cart-item {
@@ -162,13 +161,13 @@ a {
   justify-content: space-between;
 }
 
-.center {
+.contents {
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 15%;
+  line-height: 200%;
 }
 
 .price {
-  font-size: 30px;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -176,7 +175,6 @@ a {
 }
 
 .total {
-  font-size: 30px;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -191,7 +189,7 @@ a {
   width: 175px;
   text-align: center;
   background-color: yellow;
-  border: 3px solid black;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -200,10 +198,10 @@ a {
   font-size: 25px;
   margin-left: 75%;
   margin-top: 15px;
-  padding: 1%;
+  padding: 2%;
   width: 175px;
   text-align: center;
   background-color: yellow;
-  border: 3px solid black;
+  border: 2px solid black;
   cursor: pointer;
 }
