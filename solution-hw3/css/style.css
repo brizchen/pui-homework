@@ -26,7 +26,7 @@ h2 {
 
 .nav-right {
   display: flex;
-  width: calc(100% - 400px);
+  width: 100%;
   justify-content: space-around;
   flex-direction: column;
 }
@@ -40,7 +40,6 @@ h2 {
 
 .logo {
   width: 400px;
-  flex-shrink: 0;
 }
 
 .logo:hover {
@@ -131,6 +130,7 @@ a {
   display: flex;
   margin-left: 35%;
   margin-right: auto;
+  width: calc(100% - 400px);
 }
 
 .cart-list {
