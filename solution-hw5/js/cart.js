@@ -1,3 +1,40 @@
+let allGlazing = [
+  {
+      glazing: 'Keep original',
+      priceGlazing: 0.00,
+  },
+  {
+      glazing: 'Sugar milk',
+      priceGlazing: 0.00,
+  },
+  {   glazing: 'Vanilla milk',
+      priceGlazing: 0.50,
+  },
+  {
+      glazing: 'Double chocolate',
+      priceGlazing: 1.50,
+  }
+];
+
+let allPackSize = [
+  {
+      size: 1,
+      pricePackSize: 1,
+  },
+  {
+      size: 3,
+      pricePackSize: 3,
+  },
+  {
+      size: 6,
+      pricePackSize: 5,
+  },
+  {
+      size: 12,
+      pricePackSize: 10,
+  }
+];
+
 const cartSet = new Set();
 
 class Roll {
@@ -16,6 +53,8 @@ function addtoCart(rollType, rollGlazing, packSize, basePrice) {
     cartSet.add(roll);
     return roll;
 }
+
+// create 4 new rolls
 
 const originalRoll = addtoCart(
     "Original",
@@ -42,10 +81,14 @@ const appleRoll = addtoCart(
     rolls["Apple"].basePrice
 );
 
+// loop through cart set and add to checkout
+
 for (const roll of cartSet) {
     createElement(roll);
     updatePrice(roll);
   }
+
+// create new roll from template
 
 function createElement(roll) {
     const template = document.querySelector('#cart-template');
@@ -64,6 +107,8 @@ function createElement(roll) {
     updateElement(roll);
   }
 
+// update HTML elements
+
 function updateElement(roll) {
   const rollImage = roll.element.querySelector('.cart-thumbnail');
   const headerElement = roll.element.querySelector('#header');
@@ -72,7 +117,6 @@ function updateElement(roll) {
   const rollPrice = roll.element.querySelector('.price');
 
   const calculatedPrice = calculatePrice(roll);
-  console.log(calculatedPrice);
 
   rollImage.src = 'assets/products/' + rolls[roll.type].imageFile;
   headerElement.innerText = roll.type + ' Cinnamon Roll';
@@ -80,6 +124,8 @@ function updateElement(roll) {
   rollPackSize.innerText = 'Pack Size: ' + roll.size;
   rollPrice.innerText = '$' + calculatedPrice;
 }
+
+// calculate price of roll
 
 function calculatePrice(roll) {
   let glazingPrice = 0;
@@ -97,12 +143,11 @@ function calculatePrice(roll) {
   }
 
   let basePrice = rolls[roll.type].basePrice;
-  console.log(basePrice)
-  console.log(glazingPrice)
-  console.log(packPrice)
   let calculatedPrice = ((basePrice + glazingPrice) * packPrice).toFixed(2);
   return calculatedPrice;
 }
+
+// update total price when rolls are deleted
 
 function updatePrice(roll) {
   let finalPrice = document.querySelector('#pricefinal');

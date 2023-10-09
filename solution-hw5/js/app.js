@@ -38,6 +38,7 @@ let allPackSize = [
 let selectGlazing = document.querySelector('#glazing');
 let selectPackSize = document.querySelector('#packsize');
 
+// populate dropdown
 
 function displayOptions() {
     for (var i = 0; i < allGlazing.length; i++) {
@@ -62,6 +63,8 @@ selectPackSize.addEventListener('change', onSelectValueChange);
 
 displayOptions()
 
+// update price
+
 function onSelectValueChange() {
     let priceGlazing = document.querySelector('#pricefinal');
     let glazingPrice = Number(selectGlazing.value);
@@ -84,10 +87,11 @@ class Roll {
     }
 }
 
+// update URL parameters
+
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get('roll');
-console.log(rollType);
 
 const headerElement = document.querySelector('#header');
 headerElement.innerText = rollType + ' Cinnamon Roll';
@@ -100,6 +104,8 @@ rollPrice.innerText = '$' + rolls[rollType].basePrice;
 
 const btnCart = document.querySelector('#checkout-btn');
 btnCart.addEventListener("click", updateRoll);
+
+// log roll info
 
 function updateRoll(){
     let newGlazing=allGlazing[selectGlazing.selectedIndex];

@@ -33,7 +33,7 @@ h2 {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  margin-left: 500px;
+  margin-left: 60%;
   margin-top: 20px;
 }
 
@@ -161,7 +161,7 @@ a {
 
 .contents {
   margin-top: auto;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
   line-height: 200%;
 }
 
