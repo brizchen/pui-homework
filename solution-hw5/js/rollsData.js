@@ -1,3 +1,40 @@
+let allGlazing = [
+    {
+        glazing: 'Keep original',
+        priceGlazing: 0.00,
+    },
+    {
+        glazing: 'Sugar milk',
+        priceGlazing: 0.00,
+    },
+    {   glazing: 'Vanilla milk',
+        priceGlazing: 0.50,
+    },
+    {
+        glazing: 'Double chocolate',
+        priceGlazing: 1.50,
+    }
+];
+
+let allPackSize = [
+    {
+        size: 1,
+        pricePackSize: 1,
+    },
+    {
+        size: 3,
+        pricePackSize: 3,
+    },
+    {
+        size: 6,
+        pricePackSize: 5,
+    },
+    {
+        size: 12,
+        pricePackSize: 10,
+    }
+];
+
 const rolls = {
     "Original": {
         "basePrice": 2.49,
@@ -24,3 +61,14 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }    
 };
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+
+        this.element = null;
+    }
+}

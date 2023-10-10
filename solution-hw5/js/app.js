@@ -1,40 +1,3 @@
-let allGlazing = [
-    {
-        glazing: 'Keep original',
-        priceGlazing: 0.00,
-    },
-    {
-        glazing: 'Sugar milk',
-        priceGlazing: 0.00,
-    },
-    {   glazing: 'Vanilla milk',
-        priceGlazing: 0.50,
-    },
-    {
-        glazing: 'Double chocolate',
-        priceGlazing: 1.50,
-    }
-];
-
-let allPackSize = [
-    {
-        size: 1,
-        pricePackSize: 1,
-    },
-    {
-        size: 3,
-        pricePackSize: 3,
-    },
-    {
-        size: 6,
-        pricePackSize: 5,
-    },
-    {
-        size: 12,
-        pricePackSize: 10,
-    }
-];
-
 let selectGlazing = document.querySelector('#glazing');
 let selectPackSize = document.querySelector('#packsize');
 
@@ -74,18 +37,7 @@ function onSelectValueChange() {
     priceGlazing.innerHTML = '$' + newPrice.toFixed(2);
   }  
 
-const cart=[]
-
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-
-        this.element = null;
-    }
-}
+const cart = []
 
 // update URL parameters
 
