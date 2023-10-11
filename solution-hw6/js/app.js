@@ -24,8 +24,6 @@ function displayOptions() {
 selectGlazing.addEventListener('change', onSelectValueChange);
 selectPackSize.addEventListener('change', onSelectValueChange);
 
-displayOptions()
-
 // update price
 
 function onSelectValueChange() {
@@ -36,6 +34,8 @@ function onSelectValueChange() {
     let newPrice = (basePrice + glazingPrice) * packPrice;
     priceGlazing.innerHTML = '$' + newPrice.toFixed(2);
   }  
+
+displayOptions();
 
 // update URL parameters
 
@@ -57,10 +57,14 @@ btnCart.addEventListener("click", updateRoll);
 
 // log roll info
 
+retrieveFromLocalStorage();
+
 function updateRoll(){
-    let newGlazing=allGlazing[selectGlazing.selectedIndex];
-    let newPackSize=allPackSize[selectPackSize.selectedIndex];
-    let newRoll= new Roll(rollType, newGlazing.glazing, newPackSize.size, '$' + rolls[rollType].basePrice);
+    let newGlazing = allGlazing[selectGlazing.selectedIndex];
+    let newPackSize = allPackSize[selectPackSize.selectedIndex];
+    let newRoll = new Roll(rollType, newGlazing.glazing, newPackSize.size, rolls[rollType].basePrice);
+
     cart.push (newRoll);
-    console.log(cart);
+
+    saveToLocalStorage(cart);
 }

@@ -75,13 +75,7 @@ class Roll {
 
 // local storage functions
 
-const cart = []
-
-function addtoCart(rollType, rollGlazing, packSize, basePrice) {
-    const roll = new Roll(rollType, rollGlazing, packSize, basePrice);
-    cart.push(roll);
-    return roll;
-}
+let cart = []
 
 function saveToLocalStorage() {
     const cartString = JSON.stringify(cart);
@@ -89,9 +83,8 @@ function saveToLocalStorage() {
 }
 
 function retrieveFromLocalStorage() {
-    const cartString = localStorage.getItem("storedRolls");
-    const cart = JSON.parse(cartString);
-    for (const rollData of cart) {
-        addtoCart(rollData);
+    if (localStorage.getItem("storedRolls") != null) {
+        const cartString = localStorage.getItem("storedRolls");
+        cart = JSON.parse(cartString);
     }
 }

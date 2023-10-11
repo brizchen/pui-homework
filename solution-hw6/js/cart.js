@@ -1,36 +1,11 @@
-// create 4 new rolls
-
-const originalRoll = addtoCart(
-    "Original",
-    "Sugar milk",
-    1,
-    rolls["Original"].basePrice
-);
-const walnutRoll = addtoCart(
-    "Walnut",
-    "Vanilla milk",
-    12,
-    rolls["Walnut"].basePrice
-);
-const raisinRoll = addtoCart(
-    "Raisin",
-    "Sugar milk",
-    3,
-    rolls["Raisin"].basePrice
-);
-const appleRoll = addtoCart(
-    "Apple",
-    "Original",
-    3,
-    rolls["Apple"].basePrice
-);
+retrieveFromLocalStorage();
 
 // loop through cart set and add to checkout
 
 for (const roll of cart) {
     createElement(roll);
     updatePrice(roll);
-  }
+}
 
 // create new roll from template
 
@@ -93,7 +68,7 @@ function calculatePrice(roll) {
 
 // update total price when rolls are deleted
 
-function updatePrice(roll) {
+function updatePrice() {
   let finalPrice = document.querySelector('#pricefinal');
   let totalPrice = 0;
   if (cart.length === 0) {
@@ -109,5 +84,6 @@ function deleteRoll(roll) {
   roll.element.remove();
   const index = cart.indexOf(roll);
   cart.splice(index, 1);
+  saveToLocalStorage();
   updatePrice(roll);
 }
